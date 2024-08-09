@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-09T18:01:15.408146" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="c:\Robot-Framework\FirstTest\Test.robot">
+<test id="s1-t1" name="Login" line="6">
+<kw name="Login" owner="step">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-09T18:01:15.648374" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-09T18:01:15.647343" elapsed="1.690809"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-09T18:01:17.339169" level="INFO">Typing text 'standard_user' into text field 'id = user-name'.</msg>
+<arg>${InputName}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-09T18:01:17.339169" elapsed="0.122816"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-09T18:01:17.461985" level="INFO">Typing text 'secret_sauce' into text field 'id = password'.</msg>
+<arg>${InputPassword}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-09T18:01:17.461985" elapsed="0.103957"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-09T18:01:17.566947" level="INFO">Clicking button 'id = login-button'.</msg>
+<arg>${BtnLogin}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-09T18:01:17.565942" elapsed="0.082456"/>
+</kw>
+<status status="PASS" start="2024-08-09T18:01:15.645913" elapsed="2.002485"/>
+</kw>
+<kw name="Additem" owner="step">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-09T18:01:17.650476" level="INFO">Clicking button 'id = add-to-cart-sauce-labs-backpack'.</msg>
+<arg>${PrtBackpack}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-09T18:01:17.649401" elapsed="0.055791"/>
+</kw>
+<status status="PASS" start="2024-08-09T18:01:17.649401" elapsed="0.055791"/>
+</kw>
+<status status="PASS" start="2024-08-09T18:01:15.644914" elapsed="2.060278"/>
+</test>
+<status status="PASS" start="2024-08-09T18:01:15.416148" elapsed="2.290068"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
