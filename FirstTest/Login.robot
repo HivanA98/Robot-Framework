@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    step.robot
+Resource    LoginStep.robot
 Library    SeleniumLibrary
 
 *** Test Cases ***
