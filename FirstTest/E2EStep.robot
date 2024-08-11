@@ -8,9 +8,9 @@ Before All
     Open Browser    ${URL}   Chrome
     Maximize Browser Window
     Element Should Be Enabled    ${InputName}
-    Input Text    ${InputName}   standard_user
+    Input Text    ${InputName}   ${Username1}
     Element Should Be Enabled   ${InputPassword}
-    Input Text    ${InputPassword}   secret_sauce
+    Input Text    ${InputPassword}   ${PositivePassword}
     Element Should Be Enabled   ${BtnLogin}
     Click Element    ${BtnLogin}
 
