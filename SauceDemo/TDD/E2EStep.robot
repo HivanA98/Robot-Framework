@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    Resource.py
+Variables    ..//Resource.py
 
 *** Keywords ***
 
