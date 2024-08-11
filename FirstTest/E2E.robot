@@ -1,10 +1,12 @@
 *** Settings ***
 Resource   E2EStep.robot
 Library    SeleniumLibrary
-Test Setup    Setup Test Case
+Test Setup    Before All
+Test Teardown    End All
+Suite Teardown    End Testing
 
 
-*** Test Cases ***
+*** Test Cases **
 E2E Single order
     AdditemSingle
     Chekcout
@@ -28,3 +30,5 @@ E2E Multiple orders
     Chekcout
     InputAddreas
     FinishTransacton
+
+
