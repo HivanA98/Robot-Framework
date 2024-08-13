@@ -6,7 +6,7 @@ Variables    ..//Resource.py
 The user visit the website Saucedemo
     Open Browser    ${URL}   Chrome
 
-The user enters username "standard_user" and password "secret
+The user enters username "standard_user" and password "secret"
     Element Should Be Enabled    ${InputName}
     Input Text    ${InputName}   ${Username1}
 
