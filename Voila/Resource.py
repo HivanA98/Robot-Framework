@@ -1,0 +1,5 @@
+UsernameLogin = "form-control form-control-email"
+PasswordLogin = "password"
+NormalUser = "Ivan"
+NormalPass = "Password!2#"
+BtnSignin = "btn btn-block btn-primary"
