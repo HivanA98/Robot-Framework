@@ -3,6 +3,7 @@
 Preinstall
 - pip install robotframework
 - pip install webdriver-manager
+- pip install gherkin2robotframework
 
 Library
 - pip install --upgrade robotframework-appiumlibrary
