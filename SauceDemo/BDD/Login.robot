@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    PositiveLoginStep.resource
-Resource    NegativeLogin.resource
+Resource    PositiveLoginStep.robot
+Resource    NegativeLogin.robot
 Library    SeleniumLibrary
 
 *** Test Cases ***
