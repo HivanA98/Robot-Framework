@@ -36,9 +36,16 @@ Reset Browser State
 # ---------------------------------------------------------------- wait-then-act
 
 Click When Ready
+    [Documentation]    Retries briefly so a click that lands while the page is still
+    ...    smooth-scrolling (another element would receive the click) is not fatal.
     [Arguments]    ${locator}
     Wait Until Element Is Visible    ${locator}
     Wait Until Element Is Enabled    ${locator}
+    Wait Until Keyword Succeeds    5x    300ms    Scroll Into View And Click    ${locator}
+
+Scroll Into View And Click
+    [Arguments]    ${locator}
+    Scroll Element Into View    ${locator}
     Click Element    ${locator}
 
 Type When Ready
