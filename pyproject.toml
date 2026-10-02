@@ -1,0 +1,14 @@
+# Robocop 9 configuration (lint + format): `robocop check` / `robocop format`
+[tool.robocop]
+exclude = [".venv", "results"]
+target_version = 7
+
+[tool.robocop.lint]
+ignore = [
+    "missing-doc-keyword",       # keyword names are written to be self-describing
+    "missing-doc-test-case",
+]
+configure = [
+    "too-many-calls-in-keyword.max_calls=16",
+    "line-too-long.line_length=140",
+]

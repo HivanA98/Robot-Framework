@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Robot Framework / Pabot output
+results/
+output*.xml
+log*.html
+report*.html
+selenium-screenshot-*.png
+pabot_results/
+.pabotsuitenames
+geckodriver*.log
+
+# IDE
+.vscode/
+.idea/

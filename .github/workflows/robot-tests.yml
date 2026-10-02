@@ -1,0 +1,51 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      include:
+        description: "Tag to run (e.g. smoke, e2e, saucedemo, cura)"
+        required: false
+        default: "smoke"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Robocop lint
+        run: robocop check
+      - name: Robocop format check
+        run: robocop format --check --diff
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    env:
+      HEADLESS: "true"
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run suites in parallel (pabot)
+        run: |
+          EXTRA=""
+          if [ -n "${{ github.event.inputs.include }}" ]; then EXTRA="--include ${{ github.event.inputs.include }}"; fi
+          pabot --processes 4 --argumentfile config/ci.args $EXTRA SauceDemo/tests HerokuApp/tests
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: robot-results
+          path: results/
