@@ -1,0 +1,11 @@
+# Core
+robotframework==7.5
+robotframework-seleniumlibrary==6.9.0
+selenium==4.50.0            # ships Selenium Manager: drivers are downloaded automatically
+
+# Test data & execution
+robotframework-faker==6.0.0
+robotframework-pabot==5.2.2
+
+# Static analysis + formatter (Robotidy is merged into Robocop since 6.0)
+robotframework-robocop==9.1.0

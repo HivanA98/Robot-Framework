@@ -1,0 +1,9 @@
+# Shared CLI options: robot --argumentfile config/default.args <suites>
+--name Robot Framework POM
+--outputdir results
+--loglevel INFO:INFO
+--xunit xunit.xml
+--exclude wip
+--tagstatexclude saucedemo OR cura OR beautyhaul OR voila
+--reporttitle Robot Framework POM - Report
+--logtitle Robot Framework POM - Log

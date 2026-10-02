@@ -1,0 +1,5 @@
+# CI profile: headless, only sandbox/demo apps (never production sites), one retry-friendly output
+--argumentfile config/default.args
+--variable HEADLESS:True
+--include saucedemo
+--include cura
